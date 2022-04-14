@@ -26,7 +26,6 @@ const setErrorFor = (input, message) => {
     formItem.className = 'form-item error';
 }
 
-
 const setSuccessFor = (input) => {
     const formItem = input.parentElement;
 

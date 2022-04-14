@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Cadastro</title>
+</head>
+
+<body>
+
+
+
+    <div class="container-fluid">
+        <div class="row register-container">
+
+            <div class="register-form-wrapper">
+                <div class="register-form-header">
+                    <h2>Cadastro</h2>
+                </div>
+
+                <form id="form">
+
+                    <div class="mb-3 form-item">
+                        <label for="nome" class="form-label">Nome:</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Informe seu nome completo">
+                        <span class="material-icons-outlined error">
+                            error_outline
+                        </span>
+                        <span class="material-icons-outlined check">
+                            check_circle
+                        </span>
+                        <small class="form-text message"></small>
+                    </div>
+
+                    <div class="mb-3 form-item">
+                        <label for="genero" class="form-label">Gênero:</label>
+                        <div class="form-item-genero">
+                            <div>
+                                <label class="radio-inline"><input type="radio" name="genero" value="F" checked>
+                                    Feminino</label>
+                            </div>
+                            <label class="radio-inline"><input type="radio" value="M" name="genero"> Masculino</label>
+                            <label class="radio-inline"><input type="radio" value="O" name="genero"> Outro</label>
+                        </div>
+                        <small class="form-text message"></small>
+                    </div>
+
+                    <div class="mb-3 form-item">
+                        <label for="dtNascimento" class="form-label">Data Nascimento:</label>
+                        <input type="date" class="form-control" id="dtNascimento">
+                        <small class="form-text message"></small>
+                    </div>
+
+                    <div class="mb-3 form-item">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Informe seu email">
+                        <span class="material-icons-outlined error">
+                            error_outline
+                        </span>
+                        <span class="material-icons-outlined check">
+                            check_circle
+                        </span>
+                        <small class="form-text message"></small>
+                    </div>
+
+                    <div class="mb-3 form-item">
+                        <label for="senha" class="form-label">Senha:</label>
+                        <input type="password" class="form-control" id="senha" placeholder="Informe a sua senha">
+                        <span class="material-icons-outlined error">
+                            error_outline
+                        </span>
+                        <span class="material-icons-outlined check">
+                            check_circle
+                        </span>
+                        <small class="form-text message"></small>
+                    </div>
+
+                    <div class="mb-3 form-item">
+                        <label for="senha-confirmacao" class="form-label">Confirmação de senha:</label>
+                        <input type="password" class="form-control" id="senha-confirmacao"
+                            placeholder="Informe novamente a sua senha">
+                        <span class="material-icons-outlined error">
+                            error_outline
+                        </span>
+                        <span class="material-icons-outlined check">
+                            check_circle
+                        </span>
+                        <small class="form-text message"></small>
+                    </div>
+
+                    <div class="buttons">
+                        <button type="reset" form="form" value="reset" class="btn-primary">Limpar</button>
+                        <button type="submit" form="form" value="submit" class="btn-primary">Enviar</button>
+                    </div>
+                </form>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/register.js"></script>
+
+</body>
+
+</html>

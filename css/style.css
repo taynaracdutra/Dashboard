@@ -42,7 +42,7 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #eee;
+  background-color: #ccc;
 }
 .container-fluid .row .login-form {
   display: flex;
@@ -74,7 +74,7 @@ a {
 .container-fluid .row .login-form-wrapper .form-item .form-control:focus {
   color: #212529;
   background-color: #fff;
-  border-color: #f45c43;
+  border-color: hsl(8deg, 89%, 61%);
   box-shadow: none;
 }
 .container-fluid .row .login-form-wrapper .form-item span {
@@ -115,7 +115,9 @@ a {
 }
 .container-fluid .row .login-form-wrapper button {
   width: 100%;
+  min-width: 200px;
   background-image: linear-gradient(to right, #eb3349 0%, #f45c43 51%, #eb3349 100%);
+  border: none;
   padding: 15px 45px;
   text-align: center;
   text-transform: uppercase;
@@ -158,4 +160,169 @@ a {
 .container-fluid .row .login-banner h2 {
   color: #d6152c;
   font-weight: bold;
+}
+
+.register-container {
+  height: 100%;
+  padding: 0 2%;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-form-wrapper {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 7px -4px rgba(0, 0, 0, 0.64);
+}
+.register-form-wrapper h2 {
+  color: #d6152c;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.register-form-wrapper .form-item {
+  position: relative;
+}
+.register-form-wrapper .form-item .form-label {
+  margin-bottom: 0;
+}
+.register-form-wrapper .form-item-genero {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+.register-form-wrapper .form-item .form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: hsl(8deg, 89%, 61%);
+  box-shadow: none;
+}
+.register-form-wrapper .form-item span {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+}
+.register-form-wrapper .form-item span.check {
+  color: #2ecc71;
+  visibility: hidden;
+}
+.register-form-wrapper .form-item span.error {
+  color: red;
+  visibility: hidden;
+}
+.register-form-wrapper .form-item small {
+  visibility: true;
+  display: block;
+  margin-bottom: 10px;
+}
+.register-form-wrapper .form-item.success input {
+  border-color: #2ecc71;
+}
+.register-form-wrapper .form-item.success .check {
+  color: #2ecc71;
+  visibility: visible;
+}
+.register-form-wrapper .form-item.error input {
+  border-color: #e74c3c;
+}
+.register-form-wrapper .form-item.error .error {
+  color: #e74c3c;
+  visibility: visible;
+}
+.register-form-wrapper .form-item.error small {
+  visibility: visible;
+  color: #e74c3c;
+}
+.register-form-wrapper .buttons {
+  display: flex;
+  justify-content: space-around;
+}
+.register-form-wrapper .btn-primary {
+  width: 30%;
+  min-width: 200px;
+  background-image: linear-gradient(to right, #eb3349 0%, #f45c43 51%, #eb3349 100%);
+  border: none;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+.register-form-wrapper .btn-primary:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+.register-form-wrapper .btn-secondary {
+  width: 30%;
+  min-width: 200px;
+  background-image: linear-gradient(to right, #eb3349 0%, #f45c43 51%, #eb3349 100%);
+  border: none;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+.register-form-wrapper .btn-secondary:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+input[type=radio] {
+  display: grid;
+  place-content: center;
+}
+
+input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin: 0;
+  width: 1.15em;
+  height: 1.15em;
+  border: 1px solid;
+  border-radius: 50%;
+}
+
+input[type=radio]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #eb3349;
+}
+
+input[type=radio]:checked::before {
+  transform: scale(1);
+}
+
+@media screen and (max-width: 560px) {
+  .buttons {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
 }/*# sourceMappingURL=style.css.map */

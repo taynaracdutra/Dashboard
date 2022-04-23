@@ -1,0 +1,136 @@
+@import "sidebar";
+
+.container-dashboard {
+  height: 100%;
+  width: 100%;
+  background-color: $background-color;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    header {
+      height: 8%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px 0 20px;
+
+      .text-dashboard h3 {
+        color: $primary-color;
+        font-weight: bold;
+      }
+
+      .display-aside {
+        .menu {
+          height: 100px;
+          span {
+            color: $primary-color;
+
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+
+    .main-content {
+      height: 100%;
+      width: 100%;
+
+      .main-control {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 0 2rem 0 2rem;
+
+        &-one {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          a {
+            @include btn-primary(150px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 12px;
+            padding: 5px;
+          }
+        }
+
+        &-two {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+
+      .itens-container {
+        background-color: white;
+        border-radius: 10px;
+        margin: 0 2rem 2rem 2rem;
+        padding: 1rem;
+        font-size: 0.8rem;
+
+        table {
+          th {
+            color: $primary-color;
+            font-size: 1.1rem;
+          }
+
+          tbody {
+            tr {
+              &:hover {
+                background-color: $background-color;
+              }
+            }
+
+            td {
+              button {
+                width: 100%;
+                span {
+                  font-size: 1.3rem;
+                  &:hover {
+                    color: $primary-color;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 790px) {
+  .container-dashboard {
+    grid-template-columns: 200px 1fr;
+  }
+
+  aside {
+    position: relative;
+    display: block;
+    left: 0;
+  }
+  main {
+    header {
+      .display-aside {
+        button {
+          display: none;
+        }
+      }
+    }
+  }
+}

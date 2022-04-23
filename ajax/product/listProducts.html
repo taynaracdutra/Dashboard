@@ -1,0 +1,87 @@
+<div class="main-content">
+
+    <div class="main-control">
+
+        <div class="main-control-one">
+
+            <a class="btn-cadastro">
+                <span class="material-icons-outlined">
+                    add
+                </span>
+                <span> Novo Produto </span>
+            </a>
+
+        </div>
+
+        <div class="main-control-two">
+            <div class="filter">
+                <select id="select-filter" class="form-select" aria-label="Default select example">
+                    <option selected>Filter by Category</option>
+                </select>
+            </div>
+
+
+            <div class="search-product">
+                <form class="form-inline my-2 my-lg-0 d-flex">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="itens-container">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+
+
+            </tbody>
+        </table>
+
+
+    </div>
+
+</div>
+
+<script>
+    alert('oi');
+
+    function chamar() {
+        fetch('https://fakestoreapi.com/products')
+            .then(res => res.json())
+            .then(function (products) {
+                products.forEach(function (product) {
+                    console.log(product);
+
+                    let newLine = document.createElement("tr");
+                    table.appendChild(newLine);
+                    newLine.appendChild(newColumn(product.id));
+                    newLine.appendChild(newColumn(product.title));
+                    newLine.appendChild(newColumn(product.category));
+                    newLine.appendChild(newColumn(product.price));
+                })
+            });
+    }
+
+    function newColumn(value) {
+
+        let newColumn = document.createElement("td");
+        let span = document.createElement('span');
+        span.innerHTML = value;
+
+        newColumn.appendChild(span);
+
+        return newColumn;
+    }
+</script>

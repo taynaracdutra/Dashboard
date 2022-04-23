@@ -2,16 +2,22 @@
 
 .container-fluid {
   height: 100%;
-  width: 100%;
+  width: 100vw;
 
   .row {
     height: 100%;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: $background-color;
+
+    .login-banner {
+      img {
+        width: 40%;
+      }
+    }
 
     .login-form {
       display: flex;
